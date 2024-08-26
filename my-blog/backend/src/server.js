@@ -29,3 +29,8 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 const cors = require('cors');
 app.use(cors());
+
+// Conexión authControler.js de los controladores
+const authRoute = require('./routes/auth');
+
+app.use('/api/auth', authRoute);
